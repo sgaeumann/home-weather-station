@@ -1,0 +1,28 @@
+name: Analyze
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  eslint:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: code checkout
+        uses: actions/checkout@v4
+      
+      - name: node.js setup
+        uses: actions/setup-node@v4
+        with:
+          node-version: 'latest'
+      
+      - name: dependencies installation
+        working-directory: ./weather-station
+        run: npm i
+      
+      - name: eslint
+        working-directory: ./weather-station
+        run: npx eslint
