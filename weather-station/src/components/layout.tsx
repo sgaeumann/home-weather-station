@@ -5,13 +5,17 @@ import { AppBar } from "./app-bar"
 
 export const Layout: React.FC = () => {
   return (
-    <SidebarProvider>
-      <AppBar />
-      <AppSideBar />
-      <main>
-        <SidebarTrigger />
-        <Outlet /> {}
-      </main>
-    </SidebarProvider>
+    <div>
+        <AppBar />
+      <SidebarProvider defaultOpen={false}>
+        <div className="fixed left-4 top-20 z-50">
+          <SidebarTrigger />
+        </div>
+        <AppSideBar />
+        <main className="w-full">
+          <Outlet /> {}
+        </main>
+      </SidebarProvider>
+    </div>
   )
 }

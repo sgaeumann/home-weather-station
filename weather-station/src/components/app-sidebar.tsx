@@ -11,8 +11,10 @@ import {
 
 export function AppSideBar() {
   return (
-    <Sidebar className="bg-amber-500">
-      <SidebarHeader />
+    <Sidebar>
+      <SidebarHeader>
+        <h3>Home weather station</h3>
+      </SidebarHeader>
       <SidebarContent>
         <SidebarGroup>
           <SidebarMenu>
@@ -35,7 +37,7 @@ export function AppSideBar() {
       <SidebarFooter>
         <SidebarMenu>
           <SidebarMenuItem>
-            home weather station
+            © 2026
           </SidebarMenuItem>
         </SidebarMenu>
       </SidebarFooter>

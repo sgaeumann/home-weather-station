@@ -4,7 +4,7 @@ import "@/components/weather-card"
 function Home(){
     return (
         <div>
-            Home page
+            <h1 className="">Home</h1>
             <WeatherCard />
         </div>
     )
