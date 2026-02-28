@@ -11,7 +11,7 @@ import {
 
 export function AppSideBar() {
   return (
-    <Sidebar>
+    <Sidebar className="bg-amber-500">
       <SidebarHeader />
       <SidebarContent>
         <SidebarGroup>
